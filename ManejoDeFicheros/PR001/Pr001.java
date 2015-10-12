@@ -10,7 +10,7 @@ public class Pr001 {
 
         System.out.println("Introduce el la ruta absoluta del fichero");
         fichero=Teclado.cadena();
-
+        Teclado.cerrar();
         file=new File(fichero);
 
         System.out.println("Nombre del Fichero:\t" + file.getName());
