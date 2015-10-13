@@ -11,6 +11,7 @@ public class PR006 {
         BufferedReader reader, readerF1, readerF2, readerF3;
         BufferedWriter writerF1, writerF2, writerF3, writerUnido;
         char[] array = new char[15];
+        int num;
 
         try {
             reader = new BufferedReader(new FileReader(origen));
@@ -20,11 +21,17 @@ public class PR006 {
             writerF2 = new BufferedWriter(new FileWriter("PR006\\f2.txt"));
             writerF3 = new BufferedWriter(new FileWriter("PR006\\f3.txt"));
 
-            while (reader.read(array) != -1) {
-                writerF1.write(array, 0, 5);
-                writerF2.write(array, 5, 5);
-                writerF3.write(array, 10, 5);
-                Arrays.fill(array, ' ');
+            while ((num=reader.read(array)) != -1) {
+                if(num>10){
+                    writerF1.write(array, 0, 5);
+                    writerF2.write(array, 5, 5);
+                    writerF3.write(array, 10, num-10);
+                }else if(num>5) {
+                    writerF1.write(array, 0, 5);
+                    writerF2.write(array, 5, num-5);
+                }else{
+                    writerF1.write(array, 0, num);
+                }
 
             }
             writerF1.close();
@@ -36,11 +43,15 @@ public class PR006 {
             readerF2 = new BufferedReader(new FileReader("PR006\\f2.txt"));
             readerF3 = new BufferedReader(new FileReader("PR006\\f3.txt"));
 
-            while (readerF1.read(array,0,5) != -1) {
-                readerF2.read(array, 5, 5);
-                readerF3.read(array, 10, 5);
+            while ((num=readerF1.read(array,0,5)) != -1) {
+                writerUnido.write(array, 0, num);
 
-                writerUnido.write(array);
+                if((num=readerF2.read(array, 5, 5))!=-1){
+                    writerUnido.write(array,5,num);
+                    if((num=readerF3.read(array, 10, 5))!=-1){
+                        writerUnido.write(array,10,num);
+                    }
+                }
 
 
             }
