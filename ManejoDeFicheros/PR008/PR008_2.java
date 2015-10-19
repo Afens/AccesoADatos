@@ -14,7 +14,8 @@ public class PR008_2 {
 
             escribir.writeObject(per);
             escribir.writeObject(per2);
-            escribir.close();
+
+            //escribir.close();
             while (true) {
                 try {
                     System.out.println(leer.readObject().toString());

@@ -36,7 +36,8 @@ public class PR007_2 {
 
             }
             leerFich.close();
-            escribirEncrip.close();
+            escribirEncrip.flush();
+            //escribirEncrip.close();
             System.out.println();
             cont = 0;
             leerEncrp = new FileReader(encriptado);
