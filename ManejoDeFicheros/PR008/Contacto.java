@@ -4,11 +4,12 @@ import java.io.Serializable;
  * Created by Afens on 13/10/2015.
  */
 public class Contacto implements Serializable {
-
-    public String toString() {
-        return String.format("Nombre: %s\n\tTelefono: %d\n\tDireccion: %s\n\tCodigo Postal: %d\n\t%s\n",
-                nombre, phone, direc, codPostal, debo ? String.format("Le debo %.2f $", cant) : "No le debo dinero");
-    }
+    String nombre;
+    int phone;
+    String direc;
+    int codPostal;
+    boolean debo=false;
+    float cant;
 
     public Contacto(String nombre, int phone, String direc, int codPostal, float cant) {
         this.nombre = nombre;
@@ -20,12 +21,10 @@ public class Contacto implements Serializable {
             debo=true;
     }
 
-    String nombre;
-    int phone;
-    String direc;
-    int codPostal;
-    boolean debo=false;
-    float cant;
+    public String toString() {
+        return String.format("Nombre: %s\n\tTelefono: %d\n\tDireccion: %s\n\tCodigo Postal: %d\n\t%s\n",
+                nombre, phone, direc, codPostal, debo ? String.format("Le debo %.2f $", cant) : "No le debo dinero");
+    }
 
 
 }
