@@ -1,0 +1,18 @@
+<Agenda>
+  <DatosContacto>
+    <nombre>Pepe</nombre>
+    <Telefono>+3641</Telefono>
+    <direc>calle</direc>
+    <codPostal>123</codPostal>
+    <debo>false</debo>
+    <cant>0.0</cant>
+  </DatosContacto>
+  <DatosContacto>
+    <nombre>Rosa</nombre>
+    <Telefono>+3891</Telefono>
+    <direc>avenida</direc>
+    <codPostal>6355</codPostal>
+    <debo>true</debo>
+    <cant>10.6</cant>
+  </DatosContacto>
+</Agenda>

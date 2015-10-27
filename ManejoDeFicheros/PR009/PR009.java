@@ -9,10 +9,10 @@ import java.io.RandomAccessFile;
 public class PR009 {
 
     private static RandomAccessFile a;
-    private static final int CHAR_NOMBRE = 20;
-    private static final int CHAR_TELF = 12;
-    private static final int CHAR_DIR = 20;
-    private static final int TOTAL = 118;
+    public static final int CHAR_NOMBRE = 20;
+    public static final int CHAR_TELF = 12;
+    public static final int CHAR_DIR = 20;
+    public static final int TOTAL = 118;
 
     //True = vacio
     public static void main(String[] args) {
@@ -55,6 +55,7 @@ public class PR009 {
                         compactar();
                         break;
                     case 7:
+                        compactar();
                         repetir = false;
                         break;
                 }

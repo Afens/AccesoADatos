@@ -5,8 +5,8 @@ import java.io.*;
  */
 public class PR008_2 {
     public static void main(String[] args) {
-        Contacto per = new Contacto("P", 632, "C\\", 123, 10f);
-        Contacto per2 = new Contacto("J", 954, "Avenida", 432, 0f);
+        Contacto per = new Contacto("P", "632", "C\\", 123, 10f);
+        Contacto per2 = new Contacto("J", "954", "Avenida", 432, 0f);
 
         try {
             ObjectOutputStream escribir = new ObjectOutputStream(new FileOutputStream("PR008\\save.dat"));

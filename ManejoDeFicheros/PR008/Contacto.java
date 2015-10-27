@@ -5,13 +5,13 @@ import java.io.Serializable;
  */
 public class Contacto implements Serializable {
     String nombre;
-    int phone;
+    String phone;
     String direc;
     int codPostal;
     boolean debo=false;
     float cant;
 
-    public Contacto(String nombre, int phone, String direc, int codPostal, float cant) {
+    public Contacto(String nombre, String phone, String direc, int codPostal, float cant) {
         this.nombre = nombre;
         this.phone = phone;
         this.direc = direc;
@@ -22,7 +22,7 @@ public class Contacto implements Serializable {
     }
 
     public String toString() {
-        return String.format("Nombre: %s\n\tTelefono: %d\n\tDireccion: %s\n\tCodigo Postal: %d\n\t%s\n",
+        return String.format("Nombre: %s\n\tTelefono: %s\n\tDireccion: %s\n\tCodigo Postal: %d\n\t%s\n",
                 nombre, phone, direc, codPostal, debo ? String.format("Le debo %.2f $", cant) : "No le debo dinero");
     }
 

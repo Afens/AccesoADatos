@@ -14,8 +14,14 @@
       <sourceFolder url="file://$MODULE_DIR$/PR004" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/PR008" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/PR009" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/PR010" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/PR011" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/PR012" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/PR013" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="xstream-1.4.8" level="project" />
+    <orderEntry type="library" name="kxml2-2.3.0" level="project" />
   </component>
 </module>

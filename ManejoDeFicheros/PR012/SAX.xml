@@ -1,0 +1,18 @@
+<Agenda>
+  <DatosContacto>
+    <Nombre>Pepe</Nombre>
+    <Telefono prefijo="+34">3641</Telefono>
+    <Direcion localidad="T">calle</Direcion>
+    <CodPostal>123</CodPostal>
+    <Debo>false</Debo>
+    <Cantidad moneda="€">0.0</Cantidad>
+  </DatosContacto>
+  <DatosContacto>
+    <Nombre>Rosa</Nombre>
+    <Telefono prefijo="+34">3891</Telefono>
+    <Direcion localidad="C">avenida</Direcion>
+    <CodPostal>6355</CodPostal>
+    <Debo>true</Debo>
+    <Cantidad moneda="$">10.6</Cantidad>
+  </DatosContacto>
+</Agenda>
