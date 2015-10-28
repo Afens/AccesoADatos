@@ -52,7 +52,7 @@ public class GC extends DefaultHandler {
     public void endElement(String uri, String localName, String qName) throws SAXException {
         if (localName.matches("DatosContacto")) {
             try {
-                guardar = guardar.replaceAll("[\t\n]", "");
+                //guardar = guardar.replaceAll("[\t\n]", "");
                 writer.write(guardar);
                 writer.newLine();
                 guardar = "";
@@ -64,8 +64,9 @@ public class GC extends DefaultHandler {
 
     public void characters(char[] chars, int inicio, int longitud) throws SAXException {
         String car = new String(chars, inicio, longitud);
-
-        guardar += String.format("%s", car);
+        car = car.trim();
+        if (car.length() > 0)
+            guardar += String.format("%s ", car);
     }
 
 }

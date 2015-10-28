@@ -1,2 +1,2 @@
-      Nombre: Pepe    Telefono: (prefijo: +34) 3641    Direcion: (localidad: T) calle    CodPostal: 123    Debo: false    Cantidad: (moneda: €) 0.0  
-      Nombre: Rosa    Telefono: (prefijo: +34) 3891    Direcion: (localidad: C) avenida    CodPostal: 6355    Debo: true    Cantidad: (moneda: $) 10.6  
+Nombre: Pepe Telefono: (prefijo: +34) 3641 Direcion: (localidad: T) calle CodPostal: 123 Debo: false Cantidad: (moneda: €) 0.0 
+Nombre: Rosa Telefono: (prefijo: +34) 3891 Direcion: (localidad: C) avenida CodPostal: 6355 Debo: true Cantidad: (moneda: $) 10.6 
