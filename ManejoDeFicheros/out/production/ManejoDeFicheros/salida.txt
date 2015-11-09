@@ -1,16 +1,18 @@
 *************************************************************
                      Agenda Telefonica
 *************************************************************
-Nombre: Pepe
+	Nombre: Pepe
 	Telefono: +3641
 	Direccion: calle
 	Codigo Postal: 123
+	Fecha Nacimiento: 10/07/1985
 	No le debo dinero
 *************************************************************
-Nombre: Rosa
+	Nombre: Rosa
 	Telefono: +3891
 	Direccion: avenida
 	Codigo Postal: 6355
+	Fecha Nacimiento: 10/10/2000
 	Le debo 10,60 $
 *************************************************************
                   Fin de la Agenda Telefonica
