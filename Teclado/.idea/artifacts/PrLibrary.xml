@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="PrLibrary">
+    <output-path>$PROJECT_DIR$/../</output-path>
+    <root id="archive" name="PrLibrary.jar">
+      <element id="module-output" name="Teclado" />
+    </root>
+  </artifact>
+</component>
