@@ -15,6 +15,14 @@ public class PR001 {
             System.out.println("Introduce el nombre de la tabla sobre la que quieres ver los datos:");
             tabla = Teclado.cadena();
 
+            rs = dbmd.getTables(null, "horario", tabla, null);
+if (!rs.next()){
+    throw SQLException;
+}
+
+
+
+
             rs = dbmd.getColumns(null, "horario", tabla, null);
             System.out.println("\nColumnas de la tabla:");
             System.out.println("=================================================");
