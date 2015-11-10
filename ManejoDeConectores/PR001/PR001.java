@@ -16,41 +16,41 @@ public class PR001 {
             tabla = Teclado.cadena();
 
             rs = dbmd.getTables(null, "horario", tabla, null);
-if (!rs.next()){
-    throw SQLException;
-}
-
-
+            if (!rs.next()) {
+                throw new SQLException();
+            }
 
 
             rs = dbmd.getColumns(null, "horario", tabla, null);
             System.out.println("\nColumnas de la tabla:");
             System.out.println("=================================================");
-            while (rs.next()){
-                System.out.printf("Columna: %s, Tipo: %s, Tamaño: %s, ¿Puede ser null?: %s\n",rs.getString("COLUMN_NAME"),rs.getString("TYPE_NAME"),rs.getString("COLUMN_SIZE"),rs.getString("IS_NULLABLE"));
+            while (rs.next()) {
+                System.out.printf("Columna: %s, Tipo: %s, Tamaño: %s, ¿Puede ser null?: %s\n", rs.getString("COLUMN_NAME"), rs.getString("TYPE_NAME"), rs.getString("COLUMN_SIZE"), rs.getString("IS_NULLABLE"));
             }
 
             rs = dbmd.getPrimaryKeys(null, "horario", tabla);
             System.out.println("\nClaves Primarias:");
             System.out.println("=================================================");
-            while (rs.next()){
+            while (rs.next()) {
                 System.out.println(rs.getString("COLUMN_NAME"));
             }
 
             rs = dbmd.getImportedKeys(null, "horario", tabla);
             System.out.println("\nClaves Ajenas en esta tabla:");
             System.out.println("=================================================");
-            while (rs.next()){
+            while (rs.next()) {
                 System.out.println(rs.getString("FKCOLUMN_NAME"));
             }
 
             rs = dbmd.getExportedKeys(null, "horario", tabla);
             System.out.println("\nClaves Ajenas que utilizan la clave primaria:");
             System.out.println("=================================================");
-            while (rs.next()){
-                System.out.printf("En la Tabla: %s -> la Clave Ajena: %s\n", rs.getString("FKTABLE_NAME"),rs.getString("FKCOLUMN_NAME"));
+            while (rs.next()) {
+                System.out.printf("En la Tabla: %s -> la Clave Ajena: %s\n", rs.getString("FKTABLE_NAME"), rs.getString("FKCOLUMN_NAME"));
             }
 
+
+            conexion.close();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (SQLException e) {
