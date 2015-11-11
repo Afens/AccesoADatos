@@ -11,6 +11,18 @@ import java.util.regex.Pattern;
  */
 
 public class JsonSearcher {
+    public static ArrayList<Mapa> obtenerClaveValor() {
+        ArrayList<Mapa> array = new ArrayList<Mapa>();
+        do {
+            System.out.println("Introduce la clave");
+            String clave=Teclado.cadena();
+            System.out.println("Introduce el valor");
+            String valor=Teclado.cadena();
+            array.add(new Mapa(clave,valor));
+        } while (Teclado.cierto("¿Añadir otra Clave-Valor?", "Si", "No"));
+        return array;
+    }
+
     public static String obtenerJson(String rutaJson) {
         BufferedReader lector;
         String salida = "";
@@ -37,21 +49,23 @@ public class JsonSearcher {
         String linea;
         String salida = "";
 
-        linea = String.format("[\\{\\[]+(.*?\"%s\":%s.+?)[\\}\\]]", a.get(indice).clave, a.get(indice).valor);
+        linea = String.format("[\\{\\[]+(.*?\"%s\":\"?%s\"?.*?)[\\}\\]]", a.get(indice).clave, a.get(indice).valor);
         pattern = Pattern.compile(linea);
         matcher = pattern.matcher(json);
 
         while (matcher.find()) {
-            if (indice+1==a.size()) {
+            if (indice + 1 == a.size()) {
                 for (String s : matcher.group(1).split(",")) {
-                    salida += s.replace('"', ' ') + "\n";
+                    salida += s + "\n";
                 }
-            }else{
-                buscar(String.format("{%s}",matcher.group(1)), a, indice+1);
+
+            } else {
+                salida += buscar(String.format("{%s}", matcher.group(1)), a, indice + 1);
             }
             salida += "\n";
         }
 
         return salida;
     }
+
 }
