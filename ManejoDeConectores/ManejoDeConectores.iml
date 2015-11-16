@@ -7,6 +7,17 @@
       <sourceFolder url="file://$MODULE_DIR$/PR001" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/PR002" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/PR003" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/PR004" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/PR005" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/PR0" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/PR011" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/PR006" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/PR007" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/PR009" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/PR010" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/PR012" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/PR013" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/PR014" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -39,7 +39,7 @@ public class PR001 {
             System.out.println("\nClaves Ajenas en esta tabla:");
             System.out.println("=================================================");
             while (rs.next()) {
-                System.out.println(rs.getString("FKCOLUMN_NAME"));
+                System.out.printf("DE la Tabla: %s -> la Clave Ajena: %s -> en la Colunma: %s \n", rs.getString("PKTABLE_NAME"), rs.getString("PKCOLUMN_NAME"), rs.getString("FKCOLUMN_NAME"));
             }
 
             rs = dbmd.getExportedKeys(null, "horario", tabla);
