@@ -48,19 +48,20 @@ public class JsonSearcher {
         Matcher matcher;
         String linea;
         String salida = "";
-
-        linea = String.format("[\\{\\[]+(.*?\"%s\":\"?%s\"?.*?)[\\}\\]]", a.get(indice).clave, a.get(indice).valor);
+//[^\d].*?
+        System.out.println(json);
+        linea = String.format("[\\{\\[]+([^\\{]*?\"%s\":\"?%s\"?[,\\}\\]].*?)[\\}\\]]?", a.get(indice).clave, a.get(indice).valor);
         pattern = Pattern.compile(linea);
         matcher = pattern.matcher(json);
 
         while (matcher.find()) {
             if (indice + 1 == a.size()) {
-                for (String s : matcher.group(1).split(",")) {
+                for (String s : matcher.group(1).replaceAll("\\}","").split(",")) {
                     salida += s + "\n";
                 }
 
             } else {
-                salida += buscar(String.format("{%s}", matcher.group(1)), a, indice + 1);
+                salida += buscar(String.format("{%s}", matcher.group(1).replaceAll("\\}","")), a, indice + 1);
             }
             salida += "\n";
         }
