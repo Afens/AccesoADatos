@@ -18,7 +18,6 @@ public class PR009 {
                 System.out.println();
             }
 
-
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (SQLException e) {

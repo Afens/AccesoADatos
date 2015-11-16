@@ -11,7 +11,7 @@ public class PR012 {
     public static void main(String[] args) {
         try {
             Connection connection = CargarConexion.cargar();
-            String sql = "SELECT * FROM horario where codOE=? and CodCurso=?;";
+            String sql = "SELECT CodAsignatura FROM horario where codOE=? and CodCurso=? and CodAsignatura not Like '@%' and CodTramo = ?;";
             PreparedStatement statement = connection.prepareStatement(sql);
             ResultSet rs;
 
@@ -19,10 +19,17 @@ public class PR012 {
             statement.setString(1, Teclado.cadena());
             System.out.println("Introduce codCurso");
             statement.setString(2, Teclado.cadena());
-            rs = statement.executeQuery();
-
-            while (rs.next()) {
-                System.out.println(rs.getString(4));
+            String dias="LMXJV";
+            System.out.printf("\t%-9s%-9s%-12s%-10s%-10s\n","Lunes","Martes","Miercoles","Jueves","Viernes");
+            for (int i = 1; i <= 6; i++) {
+                System.out.printf("%dª\t",i);
+                for (int j = 0; j < 5; j++) {
+                    statement.setString(3, String.valueOf(dias.charAt(j))+i);
+                    rs=statement.executeQuery();
+                    rs.next();
+                    System.out.printf("%-10s",rs.getString(1));
+                }
+                System.out.println();
             }
 
         } catch (ClassNotFoundException e) {
