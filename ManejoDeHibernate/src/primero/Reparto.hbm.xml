@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 09-dic-2015 9:07:38 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="primero.Reparto" table="reparto" catalog="horario">
+        <composite-id name="id" class="primero.RepartoId">
+            <key-property name="codOe" type="string">
+                <column name="CodOe" length="4" />
+            </key-property>
+            <key-property name="codCurso" type="string">
+                <column name="CodCurso" length="2" />
+            </key-property>
+            <key-property name="codAsignatura" type="string">
+                <column name="CodAsignatura" length="5" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="profesor" class="primero.Profesor" fetch="select">
+            <column name="CodProf" length="3" />
+        </many-to-one>
+        <many-to-one name="asignatura" class="primero.Asignatura" update="false" insert="false" fetch="select">
+            <column name="CodAsignatura" length="5" not-null="true" />
+        </many-to-one>
+        <many-to-one name="curso" class="primero.Curso" update="false" insert="false" fetch="select">
+            <column name="CodOe" length="4" not-null="true" />
+            <column name="CodCurso" length="2" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>
