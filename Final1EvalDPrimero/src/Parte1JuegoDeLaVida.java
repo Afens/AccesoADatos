@@ -15,10 +15,12 @@ public class Parte1JuegoDeLaVida {
         tablero[3][1] = true;
         tablero[4][0] = true;
         tablero[4][1] = true;
+
         juego(tablero, 2, 5, 3, 6, 9);
+
     }
 
-    public static void juego(boolean[][] original, int minv, int maxv, int minm, int maxm, int ciclos) {
+    public static boolean[][] juego(boolean[][] original, int minv, int maxv, int minm, int maxm, int ciclos) {
         boolean[][] game = new boolean[original.length][];
         boolean[][] cambios = new boolean[original.length][original.length];
         boolean hayCambios;
@@ -47,7 +49,7 @@ public class Parte1JuegoDeLaVida {
             }
 
             //Realizar cambios
-            for (int i = 0; i < cambios.length && ciclos>-1; i++) {
+            for (int i = 0; i < cambios.length && ciclos > -1; i++) {
                 for (int j = 0; j < cambios.length; j++) {
                     if (cambios[i][j]) {
                         hayCambios = true;
@@ -59,7 +61,7 @@ public class Parte1JuegoDeLaVida {
 
         } while (hayCambios && !(ciclos < 0));
 
-
+        return game;
     }
 
     public static boolean cambiara(boolean[][] original, int i, int j, int min, int max) {
@@ -69,12 +71,12 @@ public class Parte1JuegoDeLaVida {
 
         for (int k = i - 1; k <= i + 1; k++) {
             for (int l = j - 1; l <= j + 1; l++) {
-                if (k > -1 && k < original.length && l > -1 && l < original.length && !(l==j && k==i))
+                if (k > -1 && k < original.length && l > -1 && l < original.length && !(l == j && k == i))
                     if (original[k][l])
                         contador++;
             }
         }
-        /* El bucle de arriba ahora lo comentado
+        /* El bucle de arriba ahorra lo comentado
         //arriba izq
         if (i - 1 > -1 && j - 1 > -1)
             if (original[i - 1][j - 1])
