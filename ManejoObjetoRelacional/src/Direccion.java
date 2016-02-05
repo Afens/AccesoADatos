@@ -19,12 +19,12 @@ public class Direccion {
         return String.format("('%s', '%s', %s, '%s')", calle, numero, poblacion.getSQL(), codPostal);
     }
 
-    public static Direccion getObject(String cadenaDir){
+    public static Direccion getObject(String cadena){
         String aux[];
-        cadenaDir = cadenaDir.replaceAll("\"", "");
-        cadenaDir = cadenaDir.replaceAll("\\)", "");
-        cadenaDir = cadenaDir.replaceAll("\\(", "");
-        aux = cadenaDir.split(",");
+        cadena = cadena.replaceAll("\"", "");
+        cadena = cadena.replaceAll("\\)", "");
+        cadena = cadena.replaceAll("\\(", "");
+        aux = cadena.split(",");
         return new Direccion(aux[0], aux[1], new Poblacion(aux[2], new Provincia(aux[3], aux[4]), aux[5]), aux[6]);
     }
 
