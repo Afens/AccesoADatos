@@ -1,0 +1,75 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2016-02-16 13:26:49 #1 store] 
+Database 'C:\Users\Usuario\Documents\GitHub\AccesoADatos\objectdb-2.6.6\db\points.odb' is opened by 22728@Usuario-PC
+
+[2016-02-16 13:26:50 #2 type.registry] 
+New type Point
+
+[2016-02-16 13:26:50 #3 type] 
+Type Point is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2016-02-16 13:28:53 #1 store] 
+Database 'C:\Users\Usuario\Documents\GitHub\AccesoADatos\objectdb-2.6.6\db\points.odb' has been recovered (tr. 6-8)
+
+[2016-02-16 13:28:53 #2 store] 
+Database 'C:\Users\Usuario\Documents\GitHub\AccesoADatos\objectdb-2.6.6\db\points.odb' is opened by 22580@Usuario-PC
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2016-02-16 13:29:14 #1 store] 
+Database 'C:\Users\Usuario\Documents\GitHub\AccesoADatos\objectdb-2.6.6\db\points.odb' has been recovered (tr. 9-9)
+
+[2016-02-16 13:29:14 #2 store] 
+Database 'C:\Users\Usuario\Documents\GitHub\AccesoADatos\objectdb-2.6.6\db\points.odb' is opened by 22424@Usuario-PC
+
+[2016-02-16 13:29:15 #3 type] 
+Type Point is not enhanced.
+
+[2016-02-16 13:29:15 #4 store] 
+Database 'C:\Users\Usuario\Documents\GitHub\AccesoADatos\objectdb-2.6.6\db\points.odb' is closed by 22424@Usuario-PC
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2016-02-16 13:30:49 #1 store] 
+Database 'C:\Users\Usuario\Documents\GitHub\AccesoADatos\objectdb-2.6.6\db\points.odb' is opened by 22684@Usuario-PC
+
+[2016-02-16 13:30:49 #2 type] 
+Type Point is not enhanced.
+
+[2016-02-16 13:30:50 #3 store] 
+Database 'C:\Users\Usuario\Documents\GitHub\AccesoADatos\objectdb-2.6.6\db\points.odb' is closed by 22684@Usuario-PC
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2016-02-16 13:31:04 #1 store] 
+Database 'C:\Users\Usuario\Documents\GitHub\AccesoADatos\objectdb-2.6.6\db\points.odb' is opened by 22944@Usuario-PC
+
+[2016-02-16 13:31:04 #2 type] 
+Type Point is not enhanced.
+
+[2016-02-16 13:31:05 #3 store] 
+Database 'C:\Users\Usuario\Documents\GitHub\AccesoADatos\objectdb-2.6.6\db\points.odb' is closed by 22944@Usuario-PC
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2016-02-16 13:31:21 #1 store] 
+Database 'C:\Users\Usuario\Documents\GitHub\AccesoADatos\objectdb-2.6.6\db\points.odb' is opened by 23288@Usuario-PC
+
+[2016-02-16 13:52:47 #2 store] 
+Database 'C:\Users\Usuario\Documents\GitHub\AccesoADatos\objectdb-2.6.6\db\points.odb' is closed by 23288@Usuario-PC
+
+[2016-02-16 13:52:55 #3 store] 
+Database 'C:\Users\Usuario\Documents\GitHub\AccesoADatos\objectdb-2.6.6\db\world.odb' is opened by 23288@Usuario-PC
+
+[2016-02-16 13:53:01 #4 store] 
+Database 'C:\Users\Usuario\Documents\GitHub\AccesoADatos\objectdb-2.6.6\db\world.odb' is closed by 23288@Usuario-PC
+
+[2016-02-16 13:53:01 #5 store] 
+Database 'C:\Users\Usuario\Documents\GitHub\AccesoADatos\objectdb-2.6.6\db\points.odb' is opened by 23288@Usuario-PC
+
+[2016-02-16 13:53:08 #6 store] 
+Database 'C:\Users\Usuario\Documents\GitHub\AccesoADatos\objectdb-2.6.6\db\points.odb' is closed by 23288@Usuario-PC
+
